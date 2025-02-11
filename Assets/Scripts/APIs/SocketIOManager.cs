@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using System;
-using UnityEngine.SceneManagement;
-using UnityEngine.Networking;
-using DG.Tweening;
-using System.Linq;
 using Newtonsoft.Json;
 using Best.SocketIO;
 using Best.SocketIO.Events;
 using Newtonsoft.Json.Linq;
 using System.Runtime.Serialization;
-using Best.HTTP.Shared;
 
 public class SocketIOManager : MonoBehaviour
 {
@@ -32,9 +26,6 @@ public class SocketIOManager : MonoBehaviour
     internal bool isResultdone = false;
 
     private SocketManager manager;
-
-    [SerializeField]
-    internal JSHandler _jsManager;
 
     protected string SocketURI = null;
     // protected string TestSocketURI = "https://game-crm-rtp-backend.onrender.com/";
