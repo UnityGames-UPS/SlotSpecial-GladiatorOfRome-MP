@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94122cea7fd8a402681849f3698f7959
+guid: ae102fc758976457cae1aa97e7256e23
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Payline 1_0
+      name: Payline 2_0
       rect:
         serializedVersion: 2
-        x: 301
-        y: 131
-        width: 1796
-        height: 827
+        x: 491
+        y: 105
+        width: 1330
+        height: 840
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69ad0ee902eab4e8aaf857db9e35655b
-      internalID: 172646517
+      spriteID: 28bbb7fa2232e4f2283c25f1deb1ecb7
+      internalID: -1009004801
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Payline 1_0: 172646517
+      Payline 2_0: -1009004801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

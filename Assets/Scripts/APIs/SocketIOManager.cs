@@ -34,8 +34,8 @@ public class SocketIOManager : MonoBehaviour
     [SerializeField]
     private string testToken;
 
-    protected string gameID = "SL-VIK";
-     //protected string gameID = "";
+    // protected string gameID = "SL-VIK";
+     protected string gameID = "";
 
     internal bool isLoaded = false;
 
@@ -252,7 +252,7 @@ public class SocketIOManager : MonoBehaviour
 
 
 
-    internal void CloseSocket()
+    public void CloseSocket()
     {
         SendDataWithNamespace("EXIT");
     }
@@ -274,11 +274,11 @@ public class SocketIOManager : MonoBehaviour
                     bonusdata = myData.message.BonusData;
                     if (!SetInit)
                     {
-                        Debug.Log(jsonObject);
-                        List<string> LinesString = ConvertListListIntToListString(initialData.Lines);
-                        List<string> InitialReels = ConvertListOfListsToStrings(initialData.Reel);
-                        InitialReels = RemoveQuotes(InitialReels);
-                        PopulateSlotSocket(InitialReels, LinesString);
+                        // Debug.Log(jsonObject);
+                        // List<string> LinesString = ConvertListListIntToListString(initialData.Lines);
+                        // List<string> InitialReels = ConvertListOfListsToStrings(initialData.Reel);
+                        // InitialReels = RemoveQuotes(InitialReels);
+                        PopulateSlotSocket(); //InitialReels, LinesString
                         SetInit = true;
                     }
                     else
@@ -315,13 +315,13 @@ public class SocketIOManager : MonoBehaviour
         uiManager.InitialiseUIData(initUIData.AbtLogo.link, initUIData.AbtLogo.logoSprite, initUIData.ToULink, initUIData.PopLink, initUIData.paylines);
     }
 
-    private void PopulateSlotSocket(List<string> slotPop, List<string> LineIds)
+    private void PopulateSlotSocket() //List<string> slotPop, List<string> LineIds
     {
         slotManager.shuffleInitialMatrix();
-        for (int i = 0; i < LineIds.Count; i++)
-        {
-            slotManager.FetchLines(LineIds[i], i);
-        }
+        // for (int i = 0; i < LineIds.Count; i++)
+        // {
+        //     slotManager.FetchLines(LineIds[i], i);
+        // }
 
         slotManager.SetInitialUI();
 
